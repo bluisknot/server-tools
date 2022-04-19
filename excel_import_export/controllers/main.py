@@ -44,7 +44,7 @@ class ReportController(report.ReportController):
             excel, report_name = report.with_context(**context)._render_excel(
                 docids, data=data
             )
-            excel = base64.decodestring(excel)
+            excel = base64.decodebytes(excel)
             if docids:
                 records = request.env[report.model].browse(docids)
                 if report.print_report_name and not len(records) > 1:
