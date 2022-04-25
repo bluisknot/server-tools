@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * modify_model_from_excel_file
+#
+# Translators:
+# Boris Luis Correa Frías <bluisknot@gmail.com>, 2022
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-20 14:40+0000\n"
+"PO-Revision-Date: 2022-04-20 14:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: excel_import_export
+#: code:addons/excel_import_export/models/common.py:0
+#: code:addons/excel_import_export/models/common.py:0
+#, python-format
+msgid "'%s' sheet not found"
+msgstr "Verifique que en el archivo \"excel\" exista una pestaña con la denominación \"%s\"."
+
+#. module: modify_model_from_excel_file
+#: model:ir.model.fields,field_description:modify_model_from_excel_file.field_modify_model_fields_from_excel_file__import_file
+msgid "Import File (*.xls, *.xlsx)"
+msgstr "Archivo (*.xls, *.xlsx)"
+
+#. module: modify_model_from_excel_file
+#: model:ir.model.fields,field_description:modify_model_from_excel_file.field_modify_model_fields_from_excel_file__import_template_id
+msgid "Import Template"
+msgstr "Plantilla de importación"
+
+#. module: modify_model_from_excel_file
+#. openerp-web
+#: code:addons/modify_model_from_excel_file/model/modify_model_from_excel_file.py:0
+#, python-format
+msgid "Unsupported file format, this import option only supports excel files (*.xls, *.xlsx)."
+msgstr "Ha seleccionado un tipo de archivo no soportado y/o inválido. Sólo puede especificar archivos \"excel\" (*.xls, *.xlsx)."
