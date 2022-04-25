@@ -45,7 +45,7 @@ class ModifyModelFieldsFromExcelFileMixin(models.AbstractModel):
         successfull_result = {} if for_onchange else True
         try:
             xlrd.open_workbook(file_contents=decoded_data)
-            return successfull_result
+            return successfull_result if for_onchange else base64_data
         except xlrd.XLRDError:
             unsupported_file_msg = _(UNSUPPORTED_FILE_MSG)
             bad_result_dict = {
