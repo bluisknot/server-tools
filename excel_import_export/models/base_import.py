@@ -40,3 +40,11 @@ class Import(models.TransientModel):
         data = self._parse_import_data_recursive(self.res_model, '', data, import_fields, options)
         data = [data[1]] if len(data) == 2 else data[1:]
         return data
+
+    def execute_import(self, fields, columns, options, dryrun=False):
+        result = super().execute_import(fields, columns, options, dryrun=dryrun)
+        messages = list(result["messages"])
+        for info in messages:
+            if info["type"] == "error" and info["message"].count(":"):
+                info["message"] = info["message"][info["message"].index(":") + 1 :].strip()
+        return result
