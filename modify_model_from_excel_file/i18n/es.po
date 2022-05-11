@@ -41,3 +41,43 @@ msgstr "Plantilla de importación"
 #, python-format
 msgid "Unsupported file format, this import option only supports excel files (*.xls, *.xlsx)."
 msgstr "Ha seleccionado un tipo de archivo no soportado y/o inválido. Sólo puede especificar archivos \"excel\" (*.xls, *.xlsx)."
+
+#. module: modify_model_from_excel_file
+#: model:ir.model.fields,field_description:modify_model_from_excel_file.field_tcx_presentacion_posicion__preview_file_content
+msgid "Preview file content?"
+msgstr "¿Previsualizar el contenido del archivo?"
+
+#. module: modify_model_from_excel_file
+#: model:ir.model.fields,help:modify_model_from_excel_file.field_tcx_presentacion_posicion__preview_file_content
+msgid "Mark if you want to fill the related fields instead of waiting the saving process."
+msgstr "Marque en caso de que desee previsualizar el contenido del archivo."
+
+#. module: modify_model_from_excel_file
+#: code:addons/modify_model_from_excel_file/models/modify_model_from_excel_file.py:0
+#, python-format
+msgid "Verify specified file."
+msgstr "Verifique el archivo especificado."
+
+#. module: modify_model_from_excel_file
+#: code:addons/modify_model_from_excel_file/models/modify_model_from_excel_file.py:0
+#, python-format
+msgid "Verify specified template file."
+msgstr "Verifique el archivo plantilla especificado."
+
+#. module: modify_model_from_excel_file
+#: code:addons/modify_model_from_excel_file/models/modify_model_from_excel_file.py:0
+#, python-format
+msgid "An import section must exists in template %s"
+msgstr "Verifique que exista una sección de importación en la plantilla %s."
+
+#. module: modify_model_from_excel_file
+#: code:addons/modify_model_from_excel_file/models/modify_model_from_excel_file.py:0
+#, python-format
+msgid "Conversion of values ​​could not be done."
+msgstr "Verifique los valores especificados."
+
+#. module: modify_model_from_excel_file
+#: code:addons/modify_model_from_excel_file/models/modify_model_from_excel_file.py:0
+#, python-format
+msgid "Parsing of values ​​could not be done."
+msgstr "Verifique los valores especificados."
