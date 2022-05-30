@@ -53,6 +53,16 @@ msgid "Mark if you want to fill the related fields instead of waiting the saving
 msgstr "Marque en caso de que desee previsualizar el contenido del archivo."
 
 #. module: modify_model_from_excel_file
+#: model:ir.model.fields,field_description:modify_model_from_excel_file.field_tcx_presentacion_posicion__clear_related_relations
+msgid "Clear loaded data?"
+msgstr "¿Eliminar datos existentes?"
+
+#. module: modify_model_from_excel_file
+#: model:ir.model.fields,help:modify_model_from_excel_file.field_tcx_presentacion_posicion__clear_related_relations
+msgid "Mark if you want to clear the content of the related fields."
+msgstr "Marque en caso de que desee eliminar la información presente en los campos relacionados."
+
+#. module: modify_model_from_excel_file
 #: code:addons/modify_model_from_excel_file/models/modify_model_from_excel_file.py:0
 #, python-format
 msgid "Verify specified file."

@@ -36,10 +36,15 @@ class ModifyModelFieldsFromExcelFileMixin(models.AbstractModel):
         string="Preview file content?",
         help="Mark if you want to fill the related fields instead of waiting the saving process.",
     )
+    clear_related_relations = fields.Boolean(
+        string="Clear loaded data?",
+        help="Mark if you want to clear the content of the related fields.",
+    )
 
     @api.onchange("import_file")
     def onchange_import_file(self):
         self.preview_file_content = None
+        self.clear_related_relations = None
         if self.import_file:
             return self._check_excel_file_content(self.import_file)
 
@@ -149,7 +154,7 @@ class ModifyModelFieldsFromExcelFileMixin(models.AbstractModel):
                 _record_id, _record_xid, record_data, record_location_info = list(converted)[0]
                 for rkey, rvalue in record_data.copy().items():
                     if CurrentModel._fields[rkey].type in ["one2many"]:
-                        record_data[rkey] = [Command.set([])] + rvalue
+                        record_data[rkey] = [Command.set([])] + rvalue if self.clear_related_relations else rvalue
                 return {"value": record_data}
             except ValueError:
                 bad_result_dict["warning"]["message"] = _("Parsing of values ​​could not be done.")
